@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+   <head>
+   </head>
+   <body>
+      <h1>Latest Offers:</h1>
+      <script type="text/javascript">
+         var exampleSocket = new WebSocket("ws://localhost:7000/ws")
+         var update = function(){
+           exampleSocket.onmessage = function (event) {
+            var longlatArr = event.data.split(" ");
+            var div = document.createElement("DIV");
+            div.innerHTML = longlatArr[1].toString();;
+            document.body.appendChild(div);
+            var div = document.createElement("DIV");
+            div.innerHTML = longlatArr[3].toString();;
+            document.body.appendChild(div);
+           }
+         };
+         window.setTimeout(update);
+      </script>
+   </body>
+</html>
