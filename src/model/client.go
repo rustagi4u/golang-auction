@@ -1,20 +1,5 @@
 package model
 
-// "User model"
-type Client struct {
-	CID          uint64
-	ClientName   string `json:"username" bson:"username"`
-	Password     string `json:”password” bson:”password"`
-	EmailAddress string `json:”emailaddress” bson:”emailaddress”`
-}
-
-// CREATE TABLE Client (
-// 	CID BIGSERIAL PRIMARY KEY NOT NULL,
-// 	ClientName TEXT NOT NULL,
-// 	Password TEXT NOT NULL,
-// 	email_address VARCHAR(45) NOT NULL
-// );
-
 //https://github.com/AmundsenJunior/rest-go-mux-pq
 
 // "Account model"

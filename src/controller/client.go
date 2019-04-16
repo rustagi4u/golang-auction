@@ -18,34 +18,6 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// // Get all Clients
-// func GetClients(w http.ResponseWriter, req *http.Request) {
-// 	clients, err := repository.GetAllClient()
-// 	if err != nil {
-// 		utils.RespondWithError(w, http.StatusInternalServerError, err.Error())
-// 		return
-// 	}
-// 	utils.RespondWithJSON(w, http.StatusOK, clients)
-// }
-
-// // "Create Client"
-// func CreateClient(w http.ResponseWriter, req *http.Request) {
-// 	body, _ := ioutil.ReadAll(req.Body)
-// 	requestBody := []byte(body)
-// 	var client model.Client
-// 	err := json.Unmarshal(requestBody, &client)
-// 	if err != nil {
-// 		msg := fmt.Sprintf("Invalid request payload. Error: %s", err.Error())
-// 		utils.RespondWithError(w, http.StatusBadRequest, msg)
-// 		return
-// 		// fmt.Println("error:", err)
-// 	}
-
-// 	u := repository.CreateClient(client)
-// 	utils.RespondWithJSON(w, http.StatusCreated, u)
-
-// }
-
 //Validate incoming user details...
 func Validate(account model.Account) (map[string]interface{}, bool) {
 
